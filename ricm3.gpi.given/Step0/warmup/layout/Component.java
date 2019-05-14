@@ -14,11 +14,19 @@ public class Component {
   protected int m_x, m_y, m_width, m_height;
 
   public Component() {
-    throw new Error("Not Yet Implemented");
+	m_parent = null;
+	m_x = 0;
+	m_y = 0;
+	m_width = 0;
+	m_height = 0;
   }
 
   public Component(Container parent) {
-    throw new Error("Not Yet Implemented");
+	m_parent = parent;
+	m_x = 0;
+	m_y = 0;
+	m_width = 0;
+	m_height = 0;
   }
 
   public String toString() {
@@ -57,7 +65,7 @@ public class Component {
    * @throws IllegalStateException if this remove is not allowed.
    */
   public void remove() {
-	throw new Error("Not Yet Implemented");
+	m_parent.m_children.remove(this);
 	m_parent = null; 
   }
 

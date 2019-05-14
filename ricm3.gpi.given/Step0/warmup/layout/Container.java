@@ -47,7 +47,17 @@ public class Container extends Component {
    * @return this selected component 
    */
   public Component select(int x, int y) {
-    throw new Error("Not Yet Implemented");
+    if (inside(x, y)) {
+    	IList.Iterator iter = m_children.iterator();
+    	while (iter.hasNext()) {
+    		Component c = ((Component)iter.next()).select(x, y);
+    		if (c != null) {
+    			return c;
+    		}
+    	}
+    	return this;
+    }
+    return null;
   }
 
 }
