@@ -33,7 +33,7 @@ public class TestsB {
 
   }
   
-  @Test //(timeout=1000)
+  @Test(timeout=1000)
   public void test02() throws Throwable {
     Root root = new Root(600, 480);
     Component c = new Component(root);
