@@ -40,7 +40,7 @@ public class Component {
 		m_y = 0;
 		m_width = 0;
 		m_height = 0;
-		m_bgColor = Color.BLACK;
+		m_bgColor = Color.WHITE;
 		m_fgColor = Color.WHITE;
 	}
 
@@ -51,7 +51,7 @@ public class Component {
 		m_y = 0;
 		m_width = 0;
 		m_height = 0;
-		m_bgColor = Color.BLACK;
+		m_bgColor = Color.WHITE;
 		m_fgColor = Color.WHITE;
 	}
 
@@ -234,9 +234,9 @@ public class Component {
 	 */
 	public void paint(Graphics g) {
 		g.setColor(m_bgColor);
-		Location loc = new Location(0, 0);
-		toGlobal(loc);
-		g.fillRect(loc.x(), loc.y(), m_width, m_height);
+		Location l = new Location(0, 0);
+		toGlobal(l);
+		g.fillRect(l.x(), l.y(), m_width, m_height);
 	}
 
 	/**

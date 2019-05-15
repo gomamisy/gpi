@@ -23,7 +23,7 @@ public class DrawCanvas extends Canvas {
 
   public DrawCanvas(Container parent) {
     super(parent);
-    throw new Error("Not Yet Implemented");
+    // throw new Error("Not Yet Implemented");
   }
 
 }
