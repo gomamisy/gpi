@@ -1,9 +1,7 @@
 package ricm3.gpi.gui.widgets;
 
-import ricm3.gpi.gui.Graphics;
 import ricm3.gpi.gui.layout.Component;
 import ricm3.gpi.gui.layout.Container;
-import ricm3.gpi.gui.layout.Location;
 
 /**
  * A canvas to draw on.
@@ -22,13 +20,4 @@ public class Canvas extends Component {
 	public Canvas(Container parent) {
 		super(parent);
 	}
-
-	@Override
-	public void paint(Graphics g) {
-		g.setColor(m_bgColor);
-		Location loc = new Location(0, 0);
-		toGlobal(loc);
-		g.fillRect(loc.x(), loc.y(), m_width, m_height);
-	}
-
 }
