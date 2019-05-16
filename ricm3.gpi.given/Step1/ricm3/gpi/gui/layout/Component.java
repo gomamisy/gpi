@@ -235,9 +235,8 @@ public class Component {
 	 */
 	public void paint(Graphics g) {
 		g.setColor(m_bgColor);
-		Location l = new Location(0, 0);
-		toGlobal(l);
-		g.fillRect(l.x(), l.y(), m_width, m_height);
+		g.fillRect(0, 0, m_width, m_height);
+
 	}
 
 	/**
