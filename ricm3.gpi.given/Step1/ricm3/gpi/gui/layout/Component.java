@@ -205,12 +205,13 @@ public class Component {
 	 * @return
 	 */
 	public boolean inside(int x, int y) {
-		if ((x >= m_x && x < m_x + m_width) && (y >= m_y && y < m_y + m_height)) {
+		Location l = new Location(x, y);
+		toLocal(l);
+		if ((l.x() >= 0 && l.x() <= width()) && (l.y() >= 0 && l.y() <= height())) {
 			return true;
 		}
 		return false;
 	}
-
 	/**
 	 * Tells if the given location is within this component. The location is given
 	 * in local coordinates.
