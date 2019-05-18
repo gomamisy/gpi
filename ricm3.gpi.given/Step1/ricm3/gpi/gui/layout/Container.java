@@ -89,7 +89,9 @@ public class Container extends Component {
 		Iterator<Component> iter = m_children.listIterator();
 		while (iter.hasNext()) {
 			courrentComp = iter.next();
-			courrentComp.paint(g);
+			Graphics tmpGraph = g.create(courrentComp.m_x, courrentComp.m_y, courrentComp.m_width, courrentComp.m_height);
+			courrentComp.paint(tmpGraph);
+			tmpGraph.dispose();
 		}
 
 	}
